@@ -1,0 +1,10 @@
+{
+  "id": "america",
+  "name": "United States",
+  "language": "en",
+  "language_name": "English",
+  "native_query_default": "How did families describe work, prices, and everyday life?",
+  "publication_cutoff": 1929,
+  "cutoff_note": "Publication year <= 1929 is a corpus filter, not a copyright determination; item-level rights and editorial additions still require review.",
+  "sources": []
+}

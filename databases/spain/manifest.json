@@ -1,0 +1,35 @@
+{
+  "id": "spain",
+  "name": "Spain",
+  "language": "es",
+  "language_name": "Spanish",
+  "native_query_default": "\u00bfC\u00f3mo describ\u00edan las familias el trabajo, los precios y la vida cotidiana?",
+  "publication_cutoff": 1929,
+  "cutoff_note": "Publication year <= 1929 is a conservative collection filter, not a copyright determination; authorship, later editions, annotations, and local law still require review.",
+  "sources": [
+    {
+      "id": "bne-bdh",
+      "name": "Biblioteca Digital Hisp\u00e1nica (Biblioteca Nacional de Espa\u00f1a)",
+      "protocol": "oai-pmh",
+      "endpoint": "https://bdh-rd.bne.es/oai.vm",
+      "rights_note": "Record-level BNE rights and access statements control; OAI discovery and an old publication date do not establish public-domain status.",
+      "options": {"status": true, "metadata_prefix": "oai_dc"}
+    },
+    {
+      "id": "prensa-historica",
+      "name": "Biblioteca Virtual de Prensa Hist\u00f3rica",
+      "protocol": "oai-pmh",
+      "endpoint": "https://prensahistorica.mcu.es/es/oai/oai.php",
+      "rights_note": "Consult the contributing institution and item-level rights statement before reuse.",
+      "options": {"status": true, "metadata_prefix": "oai_dc"}
+    },
+    {
+      "id": "internet-archive-es",
+      "name": "Internet Archive Spanish historical-text OCR",
+      "protocol": "internet-archive",
+      "endpoint": "https://archive.org/advancedsearch.php",
+      "rights_note": "Internet Archive metadata is not a rights warranty; verify each item and its scanned edition.",
+      "options": {"status": true, "query": "mediatype:texts AND language:(spa OR Spanish) AND year:[1500 TO 1929] AND (subject:Spain OR title:Espa\u00f1a)"}
+    }
+  ]
+}

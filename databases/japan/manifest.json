@@ -1,0 +1,38 @@
+{
+  "id": "japan",
+  "name": "日本",
+  "language": "ja",
+  "language_name": "日本語",
+  "native_query_default": "家族は仕事、物価、日常生活をどのように記録していましたか？",
+  "publication_cutoff": 1900,
+  "cutoff_note": "Publication year <= 1900 is a configurable, conservative historical collection heuristic, not a copyright determination or guarantee; authorship, later editions, translations, annotations, digitization rights, and applicable law still require record-level review.",
+  "sources": [
+    {
+      "id": "ndl-next-digital-library",
+      "name": "国立国会図書館 次世代デジタルライブラリー",
+      "protocol": "ndl-next-ocr",
+      "endpoint": "https://lab.ndl.go.jp/dl/",
+      "rights_note": "Collect only records marked as copyright-expired/public-domain by NDL and retain source attribution; OCR availability and the cutoff are not independent rights guarantees.",
+      "options": {
+        "status": true,
+        "format": "ocr-text",
+        "rights_filter": ["copyright-expired", "public-domain-mark"],
+        "download_scope": "records exposing full-text download"
+      }
+    },
+    {
+      "id": "aozora-bunko",
+      "name": "青空文庫",
+      "protocol": "aozora-catalog",
+      "endpoint": "https://www.aozora.gr.jp/",
+      "rights_note": "Collect only records explicitly identified as copyright-expired or published with permission that covers the intended reuse; also verify translator and edition rights and preserve file provenance.",
+      "options": {
+        "status": true,
+        "catalog_url": "https://www.aozora.gr.jp/index_pages/list_person_all_extended_utf8.zip",
+        "formats": ["plain-text", "xhtml"],
+        "encoding": "shift_jis-or-utf8-by-record",
+        "rights_filter": ["copyright-expired", "permission-recorded"]
+      }
+    }
+  ]
+}

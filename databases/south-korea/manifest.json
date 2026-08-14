@@ -1,0 +1,37 @@
+{
+  "id": "south-korea",
+  "name": "대한민국",
+  "language": "ko",
+  "language_name": "한국어",
+  "native_query_default": "가족들은 노동, 물가, 일상생활을 어떻게 기록했는가?",
+  "publication_cutoff": 1900,
+  "cutoff_note": "Publication year <= 1900 is a configurable, conservative historical collection heuristic, not a copyright determination or guarantee; authorship, translations, later editions, annotations, digitization rights, and applicable law still require record-level review.",
+  "sources": [
+    {
+      "id": "nikh-joseon-annals",
+      "name": "국사편찬위원회 조선왕조실록",
+      "protocol": "xml-bulk",
+      "endpoint": "https://sillok.history.go.kr/export/exportMain.do",
+      "rights_note": "Bulk availability and the historical age of the annals do not guarantee unrestricted rights in modern translations, editorial annotations, database structure, or images; retain NIKH provenance and inspect export terms.",
+      "options": {
+        "status": true,
+        "format": "xml",
+        "bulk": true,
+        "content_scope": ["original-text", "record-metadata"],
+        "exclude_unless_separately_cleared": ["modern-translation", "editorial-annotation", "images"]
+      }
+    },
+    {
+      "id": "nikh-korean-history-database",
+      "name": "국사편찬위원회 한국사데이터베이스",
+      "protocol": "web-database",
+      "endpoint": "https://db.history.go.kr/",
+      "rights_note": "The broader database aggregates heterogeneous collections with differing rights and access conditions; no blanket reuse permission or supported bulk text route is assumed.",
+      "options": {
+        "status": false,
+        "reason": "No validated supported bulk interface and no uniform machine-verifiable rights policy across collections.",
+        "bulk": false
+      }
+    }
+  ]
+}

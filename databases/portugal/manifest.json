@@ -1,0 +1,27 @@
+{
+  "id": "portugal",
+  "name": "Portugal",
+  "language": "pt",
+  "language_name": "Portuguese",
+  "native_query_default": "Como descreviam as fam\u00edlias o trabalho, os pre\u00e7os e a vida quotidiana?",
+  "publication_cutoff": 1929,
+  "cutoff_note": "Publication year <= 1929 is a conservative collection filter, not a copyright determination; authorship, later editions, annotations, and local law still require review.",
+  "sources": [
+    {
+      "id": "bnp-digital-public-domain",
+      "name": "Biblioteca Nacional Digital \u2014 obras em dom\u00ednio p\u00fablico",
+      "protocol": "oai-pmh",
+      "endpoint": "https://oai.bnportugal.gov.pt/servlet/OAIHandler",
+      "rights_note": "The BNP set identifies digitized public-domain works, but record/item statements still control and editions or added material may differ.",
+      "options": {"status": true, "metadata_prefix": "oai_dc", "set": "bndlivre_digitalizadas"}
+    },
+    {
+      "id": "internet-archive-pt",
+      "name": "Internet Archive Portuguese historical-text OCR",
+      "protocol": "internet-archive",
+      "endpoint": "https://archive.org/advancedsearch.php",
+      "rights_note": "Internet Archive metadata is not a rights warranty; verify each item and its scanned edition.",
+      "options": {"status": true, "query": "mediatype:texts AND language:(por OR Portuguese) AND year:[1500 TO 1929] AND (subject:Portugal OR title:Portugal)"}
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "france",
+  "name": "France",
+  "language": "fr",
+  "language_name": "français",
+  "native_query_default": "Comment les familles décrivaient-elles le travail, les prix et la vie quotidienne ?",
+  "publication_cutoff": 1900,
+  "cutoff_note": "Publication year <= 1900 is a configurable, conservative historical collection heuristic, not a copyright determination or guarantee; authorship, later editions, annotations, digitization rights, and applicable law still require record-level review.",
+  "sources": [
+    {
+      "id": "gallica",
+      "name": "Gallica — Bibliothèque nationale de France",
+      "protocol": "sru",
+      "endpoint": "https://gallica.bnf.fr/SRU",
+      "rights_note": "Gallica availability, OCR access, and an early publication date do not guarantee permission for the intended reuse; inspect the record-level rights statement and BnF reuse conditions for each item and derivative.",
+      "options": {
+        "status": true,
+        "sru_version": "1.2",
+        "operation": "searchRetrieve",
+        "record_schema": "dc",
+        "oai_record_endpoint": "https://gallica.bnf.fr/services/OAIRecord",
+        "iiif_manifest_url_template": "https://gallica.bnf.fr/iiif/ark:/12148/{ark}/manifest.json",
+        "plain_text_url_template": "https://gallica.bnf.fr/ark:/12148/{ark}.texteBrut",
+        "alto_url_template": "https://gallica.bnf.fr/RequestDigitalElement?O={ark}&E=ALTO&Deb={page}",
+        "formats": ["sru-dc", "oai-dc", "iiif", "plain-text", "alto-xml"]
+      }
+    }
+  ]
+}

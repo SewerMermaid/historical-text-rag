@@ -16,6 +16,9 @@ class Document:
     place: str = ""
     genre: str = ""
     rights: str = ""
+    country: str = "america"
+    language: str = "en"
+    content_mode: str = "native"
     metadata: dict[str, Any] = field(default_factory=dict)
 
     def asdict(self) -> dict[str, Any]:
@@ -35,6 +38,10 @@ class Chunk:
     place: str = ""
     genre: str = ""
     rights: str = ""
+    country: str = "america"
+    language: str = "en"
+    content_mode: str = "native"
+    metadata: dict[str, Any] = field(default_factory=dict)
     ordinal: int = 0
 
     def asdict(self) -> dict[str, Any]:

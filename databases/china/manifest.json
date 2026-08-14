@@ -1,0 +1,37 @@
+{
+  "id": "china",
+  "name": "中国",
+  "language": "zh",
+  "language_name": "中文",
+  "native_query_default": "家庭如何描述工作、物價與日常生活？",
+  "publication_cutoff": 1900,
+  "cutoff_note": "Publication year <= 1900 is a configurable, conservative historical collection heuristic, not a copyright determination or guarantee; authorship, later editions, annotations, digitization rights, and applicable law still require record-level review.",
+  "sources": [
+    {
+      "id": "kanripo",
+      "name": "漢籍リポジトリ (Kanseki Repository)",
+      "protocol": "git-utf8",
+      "endpoint": "https://github.com/kanripo",
+      "rights_note": "Repository access and the age of an underlying work do not guarantee unrestricted reuse of every transcription or edition; inspect each repository's licence, README, provenance, and textual-witness notes.",
+      "options": {
+        "status": true,
+        "api_endpoint": "https://www.kanripo.org/api/v1.0/",
+        "encoding": "utf-8",
+        "repository_discovery": "github-organization",
+        "file_globs": ["*.txt", "*.xml", "*.tei"]
+      }
+    },
+    {
+      "id": "ctext",
+      "name": "中國哲學書電子化計劃 (Chinese Text Project)",
+      "protocol": "ctext-json-api",
+      "endpoint": "https://api.ctext.org/",
+      "rights_note": "The Chinese Text Project restricts automated large-scale downloading and protects site content; do not bulk harvest without explicit permission and an access arrangement covering the intended use.",
+      "options": {
+        "status": false,
+        "reason": "No unrestricted supported bulk path; API access is rate-limited and full machine-readable text access can require authentication or subscription.",
+        "bulk": false
+      }
+    }
+  ]
+}

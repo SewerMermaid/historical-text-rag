@@ -1,0 +1,41 @@
+{
+  "id": "uk",
+  "name": "United Kingdom",
+  "language": "en",
+  "language_name": "English",
+  "native_query_default": "How did families describe work, prices, and everyday life?",
+  "publication_cutoff": 1900,
+  "cutoff_note": "Publication year <= 1900 is a configurable, conservative historical collection heuristic, not a copyright determination or guarantee; authorship, later editions, annotations, digitization rights, and applicable law still require record-level review.",
+  "sources": [
+    {
+      "id": "historic-hansard",
+      "name": "UK Parliament Historic Hansard",
+      "protocol": "historic-hansard-rest",
+      "endpoint": "https://api.parliament.uk/historic-hansard/",
+      "rights_note": "Reuse is subject to the Open Parliament Licence and its exclusions where applicable; verify attribution requirements, parliamentary copyright, and any third-party material in each response.",
+      "options": {
+        "status": true,
+        "formats": ["xml", "json"],
+        "xml_suffix": ".xml",
+        "json_suffix": ".js",
+        "coverage_start": 1803,
+        "coverage_end": 2005
+      }
+    },
+    {
+      "id": "eebo-tcp",
+      "name": "Early English Books Online — Text Creation Partnership",
+      "protocol": "git-tei-bulk",
+      "endpoint": "https://github.com/textcreationpartnership/Texts",
+      "rights_note": "The TCP XML transcriptions are publicly released, but that release does not grant access to or reuse rights in ProQuest page images; retain TCP provenance and inspect repository/item notices.",
+      "options": {
+        "status": true,
+        "catalog_path": "TCP.csv",
+        "repository_url_template": "https://github.com/textcreationpartnership/{tcp_id}",
+        "raw_tei_url_template": "https://raw.githubusercontent.com/textcreationpartnership/{tcp_id}/master/{tcp_id}.xml",
+        "format": "tei-p5-xml",
+        "bulk": true
+      }
+    }
+  ]
+}

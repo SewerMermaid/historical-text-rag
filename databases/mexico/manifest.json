@@ -1,0 +1,39 @@
+{
+  "id": "mexico",
+  "name": "México",
+  "language": "es",
+  "language_name": "español",
+  "native_query_default": "¿Cómo describían las familias el trabajo, los precios y la vida cotidiana?",
+  "publication_cutoff": 1850,
+  "cutoff_note": "Publication year <= 1850 is a configurable, conservative historical collection heuristic, not a copyright determination or guarantee; authorship, translations, later editions, annotations, digitization rights, and applicable law still require record-level review.",
+  "sources": [
+    {
+      "id": "uanl-digital",
+      "name": "Colección Digital UANL",
+      "protocol": "oai-pmh",
+      "endpoint": "https://cd.dgb.uanl.mx/oai/request",
+      "rights_note": "Do not collect until the OAI endpoint, item-level reuse rights, and a stable machine-readable full-text derivative have all been validated; repository access and an early date are not permission guarantees.",
+      "options": {
+        "status": "conditional",
+        "metadata_prefix": "oai_dc",
+        "enable_only_after": [
+          "OAI-PMH Identify and ListRecords requests succeed",
+          "record-level rights permit the intended reuse",
+          "a stable reusable text or OCR derivative is exposed"
+        ]
+      }
+    },
+    {
+      "id": "hndm",
+      "name": "Hemeroteca Nacional Digital de México",
+      "protocol": "web-search",
+      "endpoint": "https://hndm.iib.unam.mx/",
+      "rights_note": "HNDM limits use and reproduction, does not provide complete collection copies, and requires prior written authorization for inclusion of its digital images in other systems; do not bulk collect.",
+      "options": {
+        "status": false,
+        "reason": "Reuse terms do not support this bulk-ingestion workflow.",
+        "bulk": false
+      }
+    }
+  ]
+}

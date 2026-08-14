@@ -1,0 +1,37 @@
+{
+  "id": "brazil",
+  "name": "Brasil",
+  "language": "pt",
+  "language_name": "português",
+  "native_query_default": "Como as famílias descreviam o trabalho, os preços e a vida cotidiana?",
+  "publication_cutoff": 1900,
+  "cutoff_note": "Publication year <= 1900 is a configurable, conservative historical collection heuristic, not a copyright determination or guarantee; authorship, later editions, annotations, digitization rights, and applicable law still require record-level review.",
+  "sources": [
+    {
+      "id": "senado-discursos",
+      "name": "Senado Federal — Dados Abertos Legislativos: discursos",
+      "protocol": "rest-json",
+      "endpoint": "https://legis.senado.leg.br/dadosabertos/",
+      "rights_note": "Open API access does not guarantee that every embedded quotation or linked third-party work is reusable; retain Senado provenance and verify response-level notices and attribution requirements.",
+      "options": {
+        "status": true,
+        "list_path_template": "plenario/lista/discursos/{data_inicio}/{data_fim}.json",
+        "text_path_template": "discurso/texto-integral/{codigo_pronunciamento}",
+        "accept": "application/json",
+        "rate_limit_requests_per_second": 10
+      }
+    },
+    {
+      "id": "bndigital-hemeroteca",
+      "name": "Hemeroteca Digital Brasileira — BNDigital",
+      "protocol": "web-search-ocr",
+      "endpoint": "https://bndigital.bn.gov.br/hemeroteca-digital/",
+      "rights_note": "Public search access and OCR do not guarantee rights in every newspaper, article, image, or edition; author and item rights must be checked and the Fundação Biblioteca Nacional credited where required.",
+      "options": {
+        "status": false,
+        "reason": "No supported bulk OCR export is documented for this workflow and interactive access may require CAPTCHA.",
+        "bulk": false
+      }
+    }
+  ]
+}

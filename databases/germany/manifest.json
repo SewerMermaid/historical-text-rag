@@ -1,0 +1,42 @@
+{
+  "id": "germany",
+  "name": "Deutschland",
+  "language": "de",
+  "language_name": "Deutsch",
+  "native_query_default": "Wie beschrieben Familien Arbeit, Preise und den Alltag?",
+  "publication_cutoff": 1900,
+  "cutoff_note": "Publication year <= 1900 is a configurable, conservative historical collection heuristic, not a copyright determination or guarantee; authorship, later editions, annotations, digitization rights, and applicable law still require record-level review.",
+  "sources": [
+    {
+      "id": "dta",
+      "name": "Deutsches Textarchiv",
+      "protocol": "dta-download",
+      "endpoint": "https://www.deutschestextarchiv.de/",
+      "rights_note": "DTA text and site licensing may differ from rights in page images held by contributing libraries; retain attribution and inspect item/source-specific notices before reuse.",
+      "options": {
+        "status": true,
+        "tei_url_template": "https://www.deutschestextarchiv.de/book/download_xml/{dta_id}",
+        "plain_text_url_template": "https://www.deutschestextarchiv.de/book/download_txt/{dta_id}",
+        "formats": ["tei-xml", "plain-text"],
+        "encoding": "utf-8"
+      }
+    },
+    {
+      "id": "ddb",
+      "name": "Deutsche Digitale Bibliothek",
+      "protocol": "rest-json",
+      "endpoint": "https://api.deutsche-digitale-bibliothek.de/",
+      "rights_note": "DDB metadata access does not grant rights in the described object; the contributing institution's record-level rights statement and the rights for any full-text derivative control.",
+      "options": {
+        "status": "conditional",
+        "requires_api_key": true,
+        "openapi_endpoint": "https://api.deutsche-digitale-bibliothek.de/OpenAPI/",
+        "enable_only_after": [
+          "API-key configuration is available",
+          "record-level reuse rights are machine-verifiable",
+          "a stable reusable full-text derivative is exposed"
+        ]
+      }
+    }
+  ]
+}
